@@ -69,7 +69,7 @@
     <div class="modal-content">
       <span class="close">&times;</span>
         <div class="modal-container">
-            <form onsubmit="sendMsg()" class="contact-form" action="#">
+            <form class="contact-form" action="#">
               <label for="fname">Teljes név</label>
               <input class="name" type="text" id="name" name="name" placeholder="Teljes neved...">
           
@@ -82,7 +82,7 @@
               <div style="display: flex;
               align-items: center;
               justify-content: center;
-              width: auto;"><input type="submit" value="Email küldése"></div>
+              width: auto;"><input onclick="sendMsg()" type="submit" value="Email küldése"></div>
             </form>
     </div>
   
