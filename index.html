@@ -92,13 +92,13 @@
                     var msg = document.getElementsById("msg").value;
         
                     Email.send({
-                    SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
-                    To : 'weboldalwebshop@gmail.com',
-                    From : "weboldalwebshop@gmail.com",
-                    Subject : "Vásárló",
-                    Body : "Név: " + name + "<br/> Email: " + email + "<br/> Tárgy: " + msg
+                        SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
+                        To : 'weboldalwebshop@gmail.com',
+                        From : "weboldalwebshop@gmail.com",
+                        Subject : "Vásárló",
+                        Body : "Név: " + name + "<br/> Email: " + email + "<br/> Tárgy: " + msg
                     }).then(
-                    message => alert(message)
+                        message => alert(message)
                     );
                 }
     
