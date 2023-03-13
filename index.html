@@ -77,7 +77,7 @@
               <input class="email" type="email" id="email" name="email" placeholder="Email címed....">
           
               <label for="subject">Tárgy</label>
-              <textarea class="msg" id="subject" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
+              <textarea class="msg" id="msg" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
           
               <div style="display: flex;
               align-items: center;
@@ -90,9 +90,9 @@
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     function sendMsg() {
-    var name = document.getElementsByClassName('name').value;
-    var email = document.getElementsByClassName('email').value;
-    var msg = document.getElementsByClassName('msg').value;
+    var name = document.getElementsById('name').value;
+    var email = document.getElementsById('email').value;
+    var msg = document.getElementsById('msg').value;
         
         Email.send({
         SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
