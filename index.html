@@ -74,7 +74,7 @@
               <input class="name" type="text" id="name" name="name" placeholder="Teljes neved...">
           
               <label for="lname">Email</label>
-              <input class="email" type="email" id="email" name="email" placeholder="Email címed....">
+              <input class="email" type="text" id="email" name="email" placeholder="Email címed....">
           
               <label for="subject">Tárgy</label>
               <textarea class="msg" id="subject" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
@@ -93,9 +93,9 @@
         Email.send({
         SecureToken : "ec7e6b1a-bac2-4a15-8b68-c8242624a705",
         To : 'weboldalwebshop@gmail.com',
-        From : document.getElementsByClassName('.email').value,
+        From : document.getElementsByClassName('email').value,
         Subject : "Új vásárló",
-        Body : "Név : " + document.getElementsByClassName('.name').value + "<br>" + document.getElementsByClassName('.msg').value
+        Body : "Név : " + document.getElementsByClassName('name').value + "<br>" + document.getElementsByClassName('msg').value
     }).then(
     message => alert(message)
     );
