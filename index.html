@@ -92,10 +92,6 @@
     var name = document.getElementsByClassName('name');
     var email = document.getElementsByClassName('email');
     var msg = document.getElementsByClassName('msg');
-    submit.addEventListener('submit',(e)=>{
-        e.preventDefault();
-        console.log("megnyomva");
-
         let ebody = `
         <b>Név: </b>${name.value}
         <br>
@@ -113,7 +109,6 @@
         }).then(
         message => alert(message)
         );
-    });
     
   </script>
     <script>
@@ -175,10 +170,6 @@
             <button class="send" type="submit">Küldés</button>
         </form>
     </footer>
-    <script>
-        const form = document.querySelector('.footer-form'),
-            name = document.querySelector()
-    </script>
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
