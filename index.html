@@ -8,7 +8,6 @@
     <script src="./app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Weboldal vásár</title>
-    </script>
 </head>
 <body>
     <nav class="navbar">
@@ -70,12 +69,12 @@
     <div class="modal-content">
       <span class="close">&times;</span>
         <div class="modal-container">
-            <form onsubmit="SendMsg()" class="contact-form" action="#">
+            <form onsubmit="sendMsg()" class="contact-form" action="#">
               <label for="fname">Teljes név</label>
               <input class="name" type="text" id="name" name="name" placeholder="Teljes neved...">
           
               <label for="lname">Email</label>
-              <input class="email" type="text" id="email" name="email" placeholder="Email címed....">
+              <input class="email" type="email" id="email" name="email" placeholder="Email címed....">
           
               <label for="subject">Tárgy</label>
               <textarea class="msg" id="subject" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
@@ -86,9 +85,10 @@
               width: auto;"><input type="submit" value="Email küldése"></div>
             </form>
     </div>
-  <script src="https://smtpjs.com/v3/smtp.js">
+  
   </div>
-   <script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
     const formm = document.querySelector('.contact-form');
     function sendMsg(){
         Email.send({
@@ -98,7 +98,7 @@
         To : 'weboldalwebshop@gmail.com',
         From : document.getElementsByClassName('.email').value,
         Subject : "Vásárló",
-        Body : document.getElementsByClassName('.msg').value
+        Body :"Név:" + document.getElementsByClassName('name').value + "<br>"+ document.getElementsByClassName('.msg').value
     }).then(
   message => alert(message)
 );
