@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Weboldal vásár</title>
 </head>
 <body>
@@ -87,22 +88,21 @@
     </div>
   
   </div>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
     function sendMsg() {
     var name = document.getElementsById('name').value;
     var email = document.getElementsById('email').value;
     var msg = document.getElementsById('msg').value;
         
-        Email.send({
-        SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
-        To : 'weboldalwebshop@gmail.com',
-        From : "weboldalwebshop@gmail.com",
-        Subject : "Vásárló",
-        Body : "Név: " + name + "<br/> Email: " + email + "<br/> Tárgy: " + msg
-        }).then(
-        message => alert(message)
-        );
+    Email.send({
+    SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
+    To : 'weboldalwebshop@gmail.com',
+    From : "weboldalwebshop@gmail.com",
+    Subject : "Vásárló",
+    Body : "Név: " + name + "<br/> Email: " + email + "<br/> Tárgy: " + msg
+    }).then(
+    message => alert(message)
+    );
     }
     
   </script>
