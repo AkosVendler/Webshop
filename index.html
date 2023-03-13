@@ -86,10 +86,10 @@
               width: auto;"><input type="submit" value="Email küldése"></div>
             </form>
             <script>
-                //function sendMsg() {
-                    var name = document.getElementsById("name").value;
-                    var email = document.getElementsById("email").value;
-                    var msg = document.getElementsById("msg").value;
+                function sendMsg() {
+                    let name = document.getElementsById("name").value;
+                    let email = document.getElementsById("email").value;
+                    let msg = document.getElementsById("msg").value;
         
                     Email.send({
                         SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
@@ -100,7 +100,7 @@
                     }).then(
                         message => alert(message)
                     );
-                //}
+                }
     
   </script>
     </div>
