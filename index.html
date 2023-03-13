@@ -92,11 +92,13 @@
                     let msg = document.getElementsById("msg").value;
         
                     Email.send({
-                        SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
+                        Host : "smtp.elasticemail.com",
+                        Username : "weboldalwebshop@gmail.com",
+                        Password : "14233AD5003305889A8F500ED735EAE13AB6",
                         To : 'weboldalwebshop@gmail.com',
                         From : "weboldalwebshop@gmail.com",
                         Subject : "Vásárló",
-                        Body : "Név: " + name + "<br/> Email: " + email + "<br/> Tárgy: " + msg
+                        Body : name "<br/>" + msg
                     }).then(
                         message => alert(message)
                     );
