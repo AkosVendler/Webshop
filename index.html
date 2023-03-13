@@ -88,25 +88,22 @@
     </div>
   <script src="https://smtpjs.com/v3/smtp.js">
   </div>
-  <script>
+   <script>
     const formm = document.querySelector('.contact-form');
-    function sendMsg(e){
-        e.preventDefault();
-        const namee = document.querySelector('.name');
-        const email = document.querySelector('.email');
-        const msg = document.querySelector('.msg');
-    
+    function sendMsg(){
         Email.send({
-        SecureToken : "007118e5-822e-4c6d-86d4-07c3f5bb38bc",
+        Host : "smtp.elasticemail.com",
+        Username : "weboldalwebshop@gmail.com",
+        Password : "Weboldalwebshop1",
         To : 'weboldalwebshop@gmail.com',
-        From : email.value,
+        From : document.getElementsByClassName('.email').value,
         Subject : "Vásárló",
-        Body : msg.value
+        Body : document.getElementsByClassName('.msg').value
     }).then(
   message => alert(message)
 );
     }
-    form.addEventListener('submit', sendMsg);
+    
   </script>
     <script>
         var menuHamburger = document.querySelector("#hamburger")
