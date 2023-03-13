@@ -88,7 +88,24 @@
     </div>
   
   </div>
-  <script>
+  
+    <script>
+        var menuHamburger = document.querySelector("#hamburger")
+        var navLinks = document.querySelector(".links")
+
+        menuHamburger.addEventListener('click',()=>{
+            navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+    </nav>
+
+    <section id="rólunk" class="container">
+        <div class="text">
+            <h1><span>Weboldalak</span><br>jó áron eladóak</h1>
+        </div>
+        <div class="kep" style="display: grid; place-items: center;"><img width="60%" src="./image.png"></div>
+    </section>
+<script>
     function sendMsg() {
     var name = document.getElementsById("name").value;
     var email = document.getElementsById("email").value;
@@ -106,23 +123,6 @@
     }
     
   </script>
-    <script>
-        var menuHamburger = document.querySelector("#hamburger")
-        var navLinks = document.querySelector(".links")
-
-        menuHamburger.addEventListener('click',()=>{
-            navLinks.classList.toggle('mobile-menu')
-        })
-    </script>
-    </nav>
-
-    <section id="rólunk" class="container">
-        <div class="text">
-            <h1><span>Weboldalak</span><br>jó áron eladóak</h1>
-        </div>
-        <div class="kep" style="display: grid; place-items: center;"><img width="60%" src="./image.png"></div>
-    </section>
-
     <div class="line"></div>
 
 
