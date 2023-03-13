@@ -89,15 +89,17 @@
   </div>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script>
-    Email.send({
-    SecureToken : "ec7e6b1a-bac2-4a15-8b68-c8242624a705",
-    To : 'weboldalwebshop@gmail.com',
-    From : 'weboldalwebshop@gmail.com',
-    Subject : "Új vásárló",
-    Body : "Név : " + document.getElementsByClassName('.name') + "<br>" + document.getElementsByClassName('.msg')
-}).then(
-  message => alert(message)
-);
+    function sendMsg(){
+        Email.send({
+        SecureToken : "ec7e6b1a-bac2-4a15-8b68-c8242624a705",
+        To : 'weboldalwebshop@gmail.com',
+        From : document.getElementsByClassName('.email').value,
+        Subject : "Új vásárló",
+        Body : "Név : " + document.getElementsByClassName('.name').value + "<br>" + document.getElementsByClassName('.msg').value
+    }).then(
+    message => alert(message)
+    );
+    }
     
   </script>
     <script>
