@@ -94,7 +94,7 @@
     To : 'weboldalwebshop@gmail.com',
     From : 'weboldalwebshop@gmail.com',
     Subject : "Új vásárló",
-    Body : "Név : " + document.getElementsByClassName('.name').value + "<br>" + document.getElementsByClassName('.msg').value
+    Body : "Név : " + document.getElementsByClassName('.name') + "<br>" + document.getElementsByClassName('.msg')
 }).then(
   message => alert(message)
 );
