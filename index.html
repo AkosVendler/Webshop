@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./app.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <title>Weboldal vásár</title>
 </head>
 <body>
@@ -72,24 +71,25 @@
         <div class="modal-container">
             <form onsubmit="sendMsg(); reset(); return false" class="contact-form" action="#">
               <label for="fname">Teljes név</label>
-              <input class="name" type="text" id="name" name="name" placeholder="Teljes neved...">
+              <input class="name" type="text" id="név" name="name" placeholder="Teljes neved...">
           
               <label for="lname">Email</label>
-              <input class="email" type="text" id="email" name="email" placeholder="Email címed....">
+              <input class="email" type="text" id="mail" name="email" placeholder="Email címed....">
           
               <label for="subject">Tárgy</label>
-              <textarea class="msg" id="msg" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
+              <textarea class="msg" id="message" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
           
               <div style="display: flex;
               align-items: center;
               justify-content: center;
               width: auto;"><input type="submit" value="Email küldése"></div>
             </form>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
             <script>
                 function sendMsg() {
-                    let name = document.getElementsById("name").value;
-                    let email = document.getElementsById("email").value;
-                    let msg = document.getElementsById("msg").value;
+                    let name = document.getElementsById("név").value;
+                    let email = document.getElementsById("mail").value;
+                    let msg = document.getElementsById("message").value;
         
                     Email.send({
                         Host : "smtp.elasticemail.com",
