@@ -70,42 +70,40 @@
       <span class="close">&times;</span>
         <div class="modal-container">
             <form onsubmit="sendMsg(); reset(); return false" class="contact-form" action="#">
-              <label for="fname">Teljes név</label>
-              <input class="name" type="text" id="name" name="name" placeholder="Teljes neved...">
+  <label for="name">Teljes név</label>
+  <input class="name" type="text" id="name" name="name" placeholder="Teljes neved...">
           
-              <label for="lname">Email</label>
-              <input class="email" type="text" id="email" name="email" placeholder="Email címed....">
+  <label for="email">Email</label>
+  <input class="email" type="text" id="email" name="email" placeholder="Email címed....">
           
-              <label for="subject">Tárgy</label>
-              <textarea class="msg" id="msg" name="subject" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
+  <label for="message">Tárgy</label>
+  <textarea class="msg" id="message" name="message" placeholder="Melyik oldalt szeretnéd írd be az azonosítóját..." style="height:200px"></textarea>
           
-              <div style="display: flex;
-              align-items: center;
-              justify-content: center;
-              width: auto;"><input type="submit" value="Email küldése"></div>
-            </form>
-    </div>
-  
+  <div style="display: flex; align-items: center; justify-content: center; width: auto;">
+    <input type="submit" value="Email küldése">
   </div>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script>
-    function sendMsg() {
-    var name = document.getElementsById('name').value;
-    var email = document.getElementsById('email').value;
-    var msg = document.getElementsById('msg').value;
-        
-        Email.send({
-        SecureToken : "665ecabb-15c3-4898-bec7-bfab01b3902b",
-        To : 'weboldalwebshop@gmail.com',
-        From : "weboldalwebshop@gmail.com",
-        Subject : "💸Vásárló💸",
-        Body : "Név: " + name + "<br/> Email: " + email + "<br/> Tárgy: " + msg
-        }).then(
-        message => alert(message)
-        );
-    }
+</form>
     
-  </script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+function sendMsg() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let msg = document.getElementById("message").value;
+
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "weboldalwebshop@gmail.com",
+    Password: "14233AD5003305889A8F500ED735EAE13AB6",
+    To: 'weboldalwebshop@gmail.com',
+    From: "weboldalwebshop@gmail.com",
+    Subject: "Vásárló",
+    Body: "Név: " + name + "<br>Email: " + email + "<br>Tárgy: " + msg
+  }).then(
+    message => alert(message)
+  );
+}
+</script>
     <script>
         var menuHamburger = document.querySelector("#hamburger")
         var navLinks = document.querySelector(".links")
