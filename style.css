@@ -169,6 +169,19 @@ html::-webkit-scrollbar-track {
 #margin-container img {
     width: 65%;
 }
+.coming-soon h1{
+    text-align: center;
+    font-size: 100px;
+    color: #EB455F;
+}
+
+.coming-soon {
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 185%;
+    transform: translate(-50%, -50%);
+}
 @media screen and (max-width: 537px) {
     .navbar {
         padding: 0;
@@ -222,8 +235,23 @@ html::-webkit-scrollbar-track {
     .navbar #hamburger {
         display: block;
         color: #1e1e1e;
+        padding-top: 50px;
     }
-
+    .shopping-bag {
+        fill: #D9D9D9;
+    }
+    .text {
+        text-align: center;
+    }
+    .text span {
+        font-size: 36px;
+    }
+    .text h1 {
+        padding-top: 100px;
+    }
+    .coming-soon h1{
+        font-size: 60px;
+    }
     #rólunk {
         margin-top: 0;
     }
@@ -296,20 +324,6 @@ html::-webkit-scrollbar-track {
         flex-wrap: wrap;
         margin: 10px;
     }
-}
-
-.coming-soon h1{
-    text-align: center;
-    font-size: 100px;
-    color: #EB455F;
-}
-
-.coming-soon {
-    z-index: 1;
-    position: absolute;
-    left: 50%;
-    top: 185%;
-    transform: translate(-50%, -50%);
 }
 
 /*Footer*/
