@@ -89,20 +89,14 @@ function sendMsg() {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let msg = document.getElementById("message").value;
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            function sendMsg() {
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let msg = document.getElementById("message").value;
-
+       
   Email.send({
     Host: "smtp.elasticemail.com",
     Username: "weboldalwebshop@gmail.com",
     Password: "14233AD5003305889A8F500ED735EAE13AB6",
     To: 'weboldalwebshop@gmail.com',
     From: "weboldalwebshop@gmail.com",
-    Subject: "Vásárló",
+    Subject: "💸Vásárló💸",
     Body: "Név: " + name + "<br>Email: " + email + "<br>Tárgy: " + msg
   }).then(
     message => alert(message)
