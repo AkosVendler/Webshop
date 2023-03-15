@@ -89,10 +89,6 @@
     <input type="submit" value="Email küldése">
   </div>
 </form>
-                <div style="display: flex; align-items: center; justify-content: center; width: auto;">
-                    <input type="submit" value="Email küldése">
-                </div>
-            </form>
 
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
@@ -120,19 +116,7 @@ function sendMsg() {
   );
 }
 </script>
-            Email.send({
-                Host: "smtp.elasticemail.com",
-                Username: "weboldalwebshop@gmail.com",
-                Password: "14233AD5003305889A8F500ED735EAE13AB6",
-                To: 'weboldalwebshop@gmail.com',
-                From: "weboldalwebshop@gmail.com",
-                Subject: "💸Vásárló💸",
-                Body: "Név: " + name + "<br>Email: " + email + "<br>Tárgy: " + msg
-            }).then(
-                message => alert(message)
-            );
-            }
-        </script>
+  </div>
     </div>
 
   </div>
